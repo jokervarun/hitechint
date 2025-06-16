@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falcon BuildMart – Building Materials Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SEO basics -->
+    <meta
+      name="description"
+      content="Falcon BuildMart – Your one‑stop shop for quality building materials: cement, bricks, steel, paints, plumbing supplies & more."
+    />
+  </head>
+  <body class="antialiased text-gray-800">
+    <!-- ───────────────────────── NAVBAR ───────────────────────── → -->
+    <header class="bg-white shadow sticky top-0 z-50">
+      <div class="container mx-auto flex items-center justify-between px-4 py-3">
+        <h1 class="text-2xl font-bold text-indigo-600">Falcon BuildMart</h1>
+        <nav>
+          <button id="navToggle" class="md:hidden text-2xl">☰</button>
+          <ul
+            id="navMenu"
+            class="hidden md:flex gap-6 text-lg font-medium items-center"
+          >
+            <li><a href="#home" class="hover:text-indigo-600">Home</a></li>
+            <li><a href="#products" class="hover:text-indigo-600">Products</a></li>
+            <li><a href="#reviews" class="hover:text-indigo-600">Reviews</a></li>
+            <li><a href="#about" class="hover:text-indigo-600">About</a></li>
+            <li><a href="#contact" class="hover:text-indigo-600">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ───────────────────────── HERO / HOME ───────────────────────── → -->
+    <section
+      id="home"
+      class="bg-[url('https://images.unsplash.com/photo-1503389152951-9e252de14ab4?auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center text-white h-[60vh] flex items-center"
+    >
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-xl">
+          Quality Materials, Trusted Service
+        </h2>
+        <p class="max-w-lg text-lg md:text-xl mb-6 drop-shadow-lg">
+          Serving contractors & DIY enthusiasts in Muscat since 1996 – with the
+          widest range of certified building supplies under one roof.
+        </p>
+        <a
+          href="#products"
+          class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-6 py-3 font-semibold shadow-lg"
+          >Browse Products</a
+        >
+      </div>
+    </section>
+
+    <!-- ───────────────────────── PRODUCTS ───────────────────────── → -->
+    <section id="products" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          Our Products
+        </h3>
+
+        <!-- Category Tabs -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10" id="categoryTabs">
+          <button
+            data-category="all"
+            class="tabButton bg-indigo-600 text-white px-4 py-2 rounded-full shadow active"
+          >
+            All
+          </button>
+          <button
+            data-category="cement"
+            class="tabButton bg-white px-4 py-2 rounded-full shadow"
+          >
+            Cement
+          </button>
+          <button
+            data-category="bricks"
+            class="tabButton bg-white px-4 py-2 rounded-full shadow"
+          >
+            Bricks & Blocks
+          </button>
+          <button
+            data-category="paint"
+            class="tabButton bg-white px-4 py-2 rounded-full shadow"
+          >
+            Paints
+          </button>
+          <button
+            data-category="plumbing"
+            class="tabButton bg-white px-4 py-2 rounded-full shadow"
+          >
+            Plumbing
+          </button>
+          <!-- add more categories as required -->
+        </div>
+
+        <!-- Products Grid -->
+        <div
+          id="productGrid"
+          class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        >
+          <!-- Product Card Template -->
+          <div
+            class="productCard bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+            data-category="cement"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1585128792029-d54db5ae17cd?auto=format&fit=crop&w=700&q=60"
+              alt="Portland Cement"
+              class="h-40 w-full object-cover"
+            />
+            <div class="p-4">
+              <h4 class="font-semibold text-lg mb-1">Portland Cement 50kg</h4>
+              <p class="text-sm text-gray-600 mb-3">UltraTech | IS 269:2015</p>
+              <span class="block font-bold text-indigo-600 mb-4">OMR 1.850</span>
+              <a
+                href="#contact"
+                class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-full"
+                >Request Quote</a
+              >
+            </div>
+          </div>
+
+          <!-- Repeat productCard DIVs for other items (copy–paste & change data-category) -->
+
+          <div
+            class="productCard bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+            data-category="bricks"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1570126687708-af2f85e71d8d?auto=format&fit=crop&w=700&q=60"
+              alt="Clay Bricks"
+              class="h-40 w-full object-cover"
+            />
+            <div class="p-4">
+              <h4 class="font-semibold text-lg mb-1">Clay Bricks (Pack of 500)</h4>
+              <p class="text-sm text-gray-600 mb-3">Standard size 9” × 4.5” × 3”</p>
+              <span class="block font-bold text-indigo-600 mb-4">OMR 46.000</span>
+              <a
+                href="#contact"
+                class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-full"
+                >Request Quote</a
+              >
+            </div>
+          </div>
+
+          <!-- example paint item -->
+          <div
+            class="productCard bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+            data-category="paint"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=60"
+              alt="Interior Wall Paint"
+              class="h-40 w-full object-cover"
+            />
+            <div class="p-4">
+              <h4 class="font-semibold text-lg mb-1">Interior Wall Paint 20L</h4>
+              <p class="text-sm text-gray-600 mb-3">Dulux EasyClean | Silk Finish</p>
+              <span class="block font-bold text-indigo-600 mb-4">OMR 12.900</span>
+              <a
+                href="#contact"
+                class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-full"
+                >Request Quote</a
+              >
+            </div>
+          </div>
+          <!-- Add more products as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── REVIEWS ───────────────────────── → -->
+    <section id="reviews" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          What Our Customers Say
+        </h3>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Review Card -->
+          <blockquote class="bg-gray-50 p-6 rounded-2xl shadow">
+            <p class="text-lg italic mb-4">
+              “Excellent quality cement and prompt delivery – helped me keep my
+              villa project on schedule!”
+            </p>
+            <footer class="font-semibold">— Ahmed Al‑Harthy</footer>
+          </blockquote>
+          <blockquote class="bg-gray-50 p-6 rounded-2xl shadow">
+            <p class="text-lg italic mb-4">
+              “Competitive prices and friendly staff. Highly recommend for bulk
+              brick purchases.”
+            </p>
+            <footer class="font-semibold">— Sarah Thomas</footer>
+          </blockquote>
+          <blockquote class="bg-gray-50 p-6 rounded-2xl shadow">
+            <p class="text-lg italic mb-4">
+              “Got all my plumbing supplies in one trip. The WhatsApp quote
+              system is super convenient.”
+            </p>
+            <footer class="font-semibold">— Eng. Faisal Rahman</footer>
+          </blockquote>
+        </div>
+        <p class="text-center mt-8">
+          <a
+            href="https://g.page/r/CQhthhjTnBQ5EAI/review"
+            target="_blank"
+            class="text-indigo-600 hover:underline"
+            >Leave a Google Review →</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── ABOUT ───────────────────────── → -->
+    <section id="about" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+        <img
+          src="https://images.unsplash.com/photo-1561365452-ad50bb68c9b3?auto=format&fit=crop&w=800&q=60"
+          alt="Storefront"
+          class="rounded-2xl shadow-lg w-full h-64 object-cover"
+        />
+        <div>
+          <h3 class="text-3xl md:text-4xl font-bold mb-4">About Falcon BuildMart</h3>
+          <p class="mb-4">
+            Family‑owned & operated since 1996, Falcon BuildMart has grown from a
+            small cement depot to one of Muscat’s most trusted building‑material
+            suppliers. We pride ourselves on stocking certified products,
+            competitive pricing, and honest advice for every customer — whether
+            you’re a professional contractor or a weekend DIYer.
+          </p>
+          <p class="mb-4">
+            Our 12,000 sq ft warehouse in Al‑Khuwair houses over 2,500 SKUs: from
+            structural materials and finishing products to tools, safety gear
+            and MEP supplies.
+          </p>
+          <a
+            href="#contact"
+            class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-indigo-700"
+            >Get in Touch</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── CONTACT ───────────────────────── → -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          Contact Us
+        </h3>
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-xl font-semibold mb-3">Store Details</h4>
+            <p>Falcon BuildMart LLC</p>
+            <p>Street 123, Al‑Khuwair, Muscat, Oman</p>
+            <p class="mt-3 font-medium">Phone: <a href="tel:+96891234567" class="text-indigo-600">+968 9123 4567</a></p>
+            <p class="font-medium">
+              WhatsApp:
+              <a href="https://wa.me/96891234567" class="text-indigo-600" target="_blank">Chat with us</a>
+            </p>
+            <p class="font-medium">
+              Email:
+              <a href="mailto:sales@falconbuildmart.com" class="text-indigo-600"
+                >sales@falconbuildmart.com</a
+              >
+            </p>
+            <iframe
+              class="mt-6 rounded-2xl shadow w-full h-56"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.565267792431!2d58.393258414981404!3d23.588009684664787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e966267d9dfc733%3A0x4b6c8cfa7ca3ea05!2sAl%20Khuwair%2C%20Muscat!5e0!3m2!1sen!2som!4v1625400000000!5m2!1sen!2som"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <!-- Contact Form (static – replace action with backend or Formspree) -->
+          <form
+            action="https://formspree.io/f/yourFormID"
+            method="POST"
+            class="bg-gray-50 p-6 rounded-2xl shadow-lg"
+          >
+            <h4 class="text-xl font-semibold mb-4">Request a Quote</h4>
+            <div class="mb-4">
+              <label class="block mb-1 font-medium" for="name">Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block mb-1 font-medium" for="email">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block mb-1 font-medium" for="phone">Phone *</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block mb-1 font-medium" for="message">Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-indigo-600 text-white py-2 rounded-full font-semibold hover:bg-indigo-700"
+            >Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── FOOTER ───────────────────────── → -->
+    <footer class="bg-gray-800 text-gray-300 py-6">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <p>&copy; <span id="year"></span> Falcon BuildMart LLC. All rights reserved.</p>
+        <div class="flex gap-4 text-xl">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="hover:text-white"
+            aria-label="Facebook"
+            ></a
+          >
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="hover:text-white"
+            aria-label="Instagram"
+            ></a
+          >
+          <a
+            href="https://wa.me/96891234567"
+            target="_blank"
+            class="hover:text-white"
+            aria-label="WhatsApp"
+            ></a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- ───────────────────────── SCRIPTS ───────────────────────── → -->
+    <script>
+      // Update footer year automatically
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile nav toggle
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+
+      // Category filtering
+      const tabButtons = document.querySelectorAll(".tabButton");
+      const productCards = document.querySelectorAll(".productCard");
+
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // activate tab UI
+          tabButtons.forEach((b) => b.classList.remove("bg-indigo-600", "text-white", "active"));
+          btn.classList.add("bg-indigo-600", "text-white", "active");
+
+          const category = btn.dataset.category;
+          productCards.forEach((card) => {
+            card.style.display =
+              category === "all" || card.dataset.category === category ? "block" : "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
