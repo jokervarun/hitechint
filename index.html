@@ -127,80 +127,50 @@
     </section>
 
     <!-- ───────────────────────── REVIEWS ───────────────────────── → -->
-   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Customer Reviews</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap');
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #f9fafb;
-      margin: 2rem;
-      display: flex;
-      justify-content: center;
-    }
-    .reviews-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      max-width: 960px;
-      width: 100%;
-    }
-    .review-card {
-      background: white;
-      padding: 1.8rem 2rem;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
-      display: flex;
-      flex-direction: column;
-      gap: .6rem;
-    }
-    .review-name {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #111827;
-      margin-bottom: 0.3rem;
-    }
-    .review-rating {
-      color: #fbbf24;
-      font-size: 1.2rem;
-      margin-bottom: 0.8rem;
-      user-select: none;
-    }
-    .review-text {
-      font-size: 0.95rem;
-      line-height: 1.4;
-      color: #374151;
-      white-space: pre-line;
-    }
-  </style>
-</head>
-<body>
-  <main class="reviews-container" role="region" aria-label="Customer Reviews">
-    <section class="review-card" tabindex="0">
-      <p class="review-name">Sanu Shivan</p>
-      <p class="review-rating" aria-label="5 star rating">⭐⭐⭐⭐⭐</p>
-      <p class="review-text">Full range of Dewalt, makita and many more brands power tool collection</p>
-    </section>
-
-    <section class="review-card" tabindex="0">
-      <p class="review-name">Damu Murali</p>
-      <p class="review-rating" aria-label="4 star rating">⭐⭐⭐⭐</p>
-      <p class="review-text">
-Good building material shop in Honda Road, new ROP building on the right side when travelling from hamriya to wadi kabir. They have power tools, Fasteners, ppe products like helmets, coveralls etc and also adhesives, sealants and chemicals.
+<div class="customer-reviews w-full flex justify-center py-8">
+  <div class="grid w-full max-w-screen-md gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- Review 1 -->
+    <article
+      class="flex flex-col gap-2 rounded-xl bg-white p-6 shadow-md"
+      tabindex="0"
+      aria-label="Review by Sanu Shivan"
+    >
+      <h3 class="font-semibold text-lg text-gray-900">Sanu Shivan</h3>
+      <p class="text-amber-400 text-xl leading-none select-none">★★★★★</p>
+      <p class="text-sm text-gray-700">
+        Full range of DeWalt, Makita and many more brands’ power‑tool collection.
       </p>
-    </section>
+    </article>
 
-    <section class="review-card" tabindex="0">
-      <p class="review-name">shylaj madhavan</p>
-      <p class="review-rating" aria-label="5 star rating">⭐⭐⭐⭐⭐</p>
-      <p class="review-text">Will get most of tools and economy prize too</p>
-    </section>
-  </main>
-</body>
+    <!-- Review 2 -->
+    <article
+      class="flex flex-col gap-2 rounded-xl bg-white p-6 shadow-md"
+      tabindex="0"
+      aria-label="Review by Damu Murali"
+    >
+      <h3 class="font-semibold text-lg text-gray-900">Damu Murali</h3>
+      <p class="text-amber-400 text-xl leading-none select-none">★★★★☆</p>
+      <p class="text-sm text-gray-700 whitespace-pre-line">
+Good building‑material shop on Honda Road (new ROP building, right‑hand side when travelling from Hamriya to Wadi Kabir). They carry power tools, fasteners, PPE (helmets, coveralls, etc.) plus adhesives, sealants and chemicals.
+      </p>
+    </article>
+
+    <!-- Review 3 -->
+    <article
+      class="flex flex-col gap-2 rounded-xl bg-white p-6 shadow-md"
+      tabindex="0"
+      aria-label="Review by Shylaj Madhavan"
+    >
+      <h3 class="font-semibold text-lg text-gray-900">Shylaj Madhavan</h3>
+      <p class="text-amber-400 text-xl leading-none select-none">★★★★★</p>
+      <p class="text-sm text-gray-700">
+        Will get most of the tools, and prices are economical too.
+      </p>
+    </article>
+  </div>
+</div>
+
     <!-- ───────────────────────── ABOUT ───────────────────────── → -->
     <section id="about" class="py-16 bg-[#F9F9F9]">
       <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
