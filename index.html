@@ -127,49 +127,80 @@
     </section>
 
     <!-- ───────────────────────── REVIEWS ───────────────────────── → -->
-    <section id="reviews" class="py-16 bg-[#FAF5E4]">
-      <div class="container mx-auto px-4">
-        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">
-          What Our Customers Say
-        </h3>
-      
-    <strong>Sanu Shivan</strong> 
-    <div>
-      <span title="5 stars">
-        ⭐⭐⭐⭐⭐
-      </span>
-    </div>
-    <p>Full range of Dewalt, makita and many more brands power tool collection</p>
-  </div>
-  <div class="review">
-    <strong>Damu Murali</strong> <span style="color: #999;">Local Guide</span>
-    <div>
-      <span title="4 stars">
-        ⭐⭐⭐⭐
-      </span>
-    </div>
-    <p>Good building material shop in Honda Road, new ROP building on the right side when travelling from hamriya to wadi kabir. They have power tools, Fasteners, ppe products like helmets, coveralls etc and also adhesives, sealants and chemicals.</p>
-  </div>
-  <div class="review">
-    <strong>shylaj madhavan</strong> <span style="color: #999;">Local Guide</span>
-    <div>
-      <span title="5 stars">
-        ⭐⭐⭐⭐⭐
-      </span>
-    </div>
-    <p>Will get most of tools and economy prize too</p>
-  </div>
-</div>  <p class="text-center mt-8">
-          <a
-            href="https://g.co/kgs/VvffLDy"
-            target="_blank"
-            class="text-[#2C3E50] hover:underline"
-            >Leave a Google Review →</a
-          >
-        </p>
-      </div>
+   <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customer Reviews</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap');
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f9fafb;
+      margin: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+    .reviews-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      max-width: 960px;
+      width: 100%;
+    }
+    .review-card {
+      background: white;
+      padding: 1.8rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .review-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #111827;
+      margin-bottom: 0.3rem;
+    }
+    .review-rating {
+      color: #fbbf24;
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      user-select: none;
+    }
+    .review-text {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #374151;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <main class="reviews-container" role="region" aria-label="Customer Reviews">
+    <section class="review-card" tabindex="0">
+      <p class="review-name">Sanu Shivan</p>
+      <p class="review-rating" aria-label="5 star rating">⭐⭐⭐⭐⭐</p>
+      <p class="review-text">Full range of Dewalt, makita and many more brands power tool collection</p>
     </section>
 
+    <section class="review-card" tabindex="0">
+      <p class="review-name">Damu Murali</p>
+      <p class="review-rating" aria-label="4 star rating">⭐⭐⭐⭐</p>
+      <p class="review-text">
+Good building material shop in Honda Road, new ROP building on the right side when travelling from hamriya to wadi kabir. They have power tools, Fasteners, ppe products like helmets, coveralls etc and also adhesives, sealants and chemicals.
+      </p>
+    </section>
+
+    <section class="review-card" tabindex="0">
+      <p class="review-name">shylaj madhavan</p>
+      <p class="review-rating" aria-label="5 star rating">⭐⭐⭐⭐⭐</p>
+      <p class="review-text">Will get most of tools and economy prize too</p>
+    </section>
+  </main>
+</body>
     <!-- ───────────────────────── ABOUT ───────────────────────── → -->
     <section id="about" class="py-16 bg-[#F9F9F9]">
       <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
